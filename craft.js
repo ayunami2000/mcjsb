@@ -607,7 +607,7 @@ class World {
 		if(Math.sqrt(a*a+b*b)>R) continue;
 
 		if(this.findChunk(px,pz)==null) {
-		    debug.log("Creating chunk\n");
+		    debug.log("[WorldGen] Creating chunk\n");
 		    this.chunks.push(new Chunk(this.chunkWidth,this.chunkHeight,this.chunkDepth , px,0,pz ,this.seed,this.blocks,this));
             break; } } } }
     
@@ -899,10 +899,10 @@ window.onload = function() {
 
         let d = Math.sqrt(Math.pow(X-c.posx, 2)+Math.pow(Y-c.posy, 2));
 
-       // debug.log('dist : ' + d + '\n');
+        debug.log('dist : ' + d + '\n');
 
         if(d > 200.0) {
-            //debug.log('chunk forgotten\n');
+            debug.log('chunk forgotten\n');
             continue;
         }
 
