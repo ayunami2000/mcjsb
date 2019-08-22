@@ -568,7 +568,7 @@ class World {
 	for(var i=0;i<this.chunks.length;++i) {
 	    if(this.chunks[i].posx==x&&this.chunks[i].posz==z) {
 		return this.chunks[i]; } }
-	debug.log("[WorldGen] No chunk at: " + X + "," + Z + "\n");
+	// debug.log("[WorldGen] No chunk at: " + X + "," + Z + "\n");
 	return null; }
 
     getChunkIndex(X,Z) {
@@ -578,7 +578,7 @@ class World {
 	for(var i=0;i<this.chunks.length;++i) {
 	    if(this.chunks[i].posx==x&&this.chunks[i].posz==z) {
 		return i; } }
-	debug.log("[WorldGen] No chunk at: " + X + "," + Z + "\n");
+	// debug.log("[WorldGen] No chunk at: " + X + "," + Z + "\n");
 	return null; }
 
     scan(X,Z,R) {
@@ -607,7 +607,7 @@ class World {
 		if(Math.sqrt(a*a+b*b)>R) continue;
 
 		if(this.findChunk(px,pz)==null) {
-		    debug.log("[WorldGen] Creating chunk\n");
+		    // debug.log("[WorldGen] Creating chunk\n");
 		    this.chunks.push(new Chunk(this.chunkWidth,this.chunkHeight,this.chunkDepth , px,0,pz ,this.seed,this.blocks,this));
             break; } } } }
     
