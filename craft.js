@@ -629,9 +629,8 @@ class World {
 window.onload = function() {
     debug.log("\
 \n\
-                    █▀▄▀█ ░▀░ █▀▀▄ █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀ ▀▀█▀▀\n\
-                    █░▀░█ ▀█▀ █░░█ █░░ █▀▀ █▄▄▀ █▄▄█ █▀▀ ░░█░░\n\
-                    ▀░░░▀ ▀▀▀ ▀░░▀ ▀▀▀ ▀▀▀ ▀░▀▀ ▀░░▀ ▀░░ ░░▀░░\n\
+                               Minceraft\n\
+\n\
 \n\
                 Originally created by: Casey Langevin\n\
                        Forked by: Ricky Cheung\n\
