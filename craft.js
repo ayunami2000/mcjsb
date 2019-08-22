@@ -629,15 +629,15 @@ class World {
 window.onload = function() {
     debug.log("\
 \n\
-              #   # #-- ##. ##. # #   .#- ##. .#. #-- #-# \n\
-              # : # #-- #-: #-: '.'   #   #-: :-: #--  :  \n\
-              '#'#' #-- ##' ##'  :    '#- # : : : #    :  \n\
+          :\/:  ---  :\  :  :--- :---  :===  :--:  :---  ----\n\
+          :  :   |   : \ :  :    :---  :\    :--:  :---    |\n\
+          :  :  ---  :  \:  :--- :---  : \   :  :  :       |\n\
 \n\
-                         By: Casey Langevin\n\
-                       'Why did I make this?'\n\
+                Originally created by: Casey Langevin\n\
+                       Forked by: Ricky Cheung\n\
 \n\
-                     Email   : comfykernel@gmail.com\n\
-                     Twitter : @ComfyKernel\n\
+                     Email   : rcheung844@gmail.com\n\
+                  This project is forked under the GPLv3\n\
 \n");
 
     debug.log("[INIT] Using browser : " + window.navigator.userAgent + "\n");
