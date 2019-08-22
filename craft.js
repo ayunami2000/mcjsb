@@ -48,7 +48,7 @@ var gl_aspect;
 var wvao;
     
 function initgl(name) {
-    debug.log("[INIT] Loading WebGL2...");
+    debug.log("[GL] Loading WebGL2...");
     var vbox = document.getElementById(name);
     vbox.width =vbox.clientWidth;
     vbox.height=vbox.clientHeight;
@@ -56,27 +56,27 @@ function initgl(name) {
     if(!gl_force_wgl1) gl = vbox.getContext("webgl2");
     
     if(gl == null || gl_force_wgl1) {
-        if(!gl_force_wgl1) { debug.log(" Failed\n"); } else { debug.log(" Forcing WebGL1\n"); }
-        debug.log("[INIT] Loading Experimental WebGL...");
+        if(!gl_force_wgl1) { debug.log("[ GL ] Failed\n"); } else { debug.log("[ GL ] Forcing WebGL1\n"); }
+        debug.log("[ GL ] Loading Experimental WebGL...");
         gl = document.getElementById(name).getContext("experimental-webgl");
         gl_mode = 1;
         
         if(gl == null) {
-            debug.log(" Failed\n[INIT] Loading WebGL...");
+            debug.log(" Failed\n[ GL ] Loading WebGL...");
             gl = document.getElementById(name).getContext("webgl");
             
             if(gl == null) {
-		debug.log(" Failed\n[INIT] Failed to load WebGL\n"); return; } }
+		debug.log(" Failed\n[ GL ] Failed to load WebGL\n"); return; } }
     } else {
 	gl_mode = 2; }
     
     debug.log("\n");
     
-    debug.log(  "[ GL ] WebGL Info :"
-		+ "\n[ GL ]   Version  : " + gl.getParameter(gl.VERSION )
-		+ "\n[ GL ]   Vendor   : " + gl.getParameter(gl.VENDOR  )
-		+ "\n[ GL ]   Renderer : " + gl.getParameter(gl.RENDERER)
-		+ "\n[ GL ]   Shader V : " + gl.getParameter(gl.SHADING_LANGUAGE_VERSION) + "\n");
+    debug.log(  "[Info] [ GL ] WebGL Info :"
+		+ "\n[INFO] [ GL ]   Version  : " + gl.getParameter(gl.VERSION )
+		+ "\n[INFO] [ GL ]   Vendor   : " + gl.getParameter(gl.VENDOR  )
+		+ "\n[INFO] [ GL ]   Renderer : " + gl.getParameter(gl.RENDERER)
+		+ "\n[INFO] [ GL ]   Shader V : " + gl.getParameter(gl.SHADING_LANGUAGE_VERSION) + "\n");
 
     wvao = new VAO();
     
@@ -273,7 +273,7 @@ class BlockCollider {
 	case ZD:
 	    return (((this.posz+(this.depth/2.0 ))-Z)<0)+4; }
 
-	debug.log("Can't decide direction\n");
+	debug.log("[WorldGen] Can't decide direction\n");
 	return null; }
     
     isColliding(BC) {
@@ -568,7 +568,7 @@ class World {
 	for(var i=0;i<this.chunks.length;++i) {
 	    if(this.chunks[i].posx==x&&this.chunks[i].posz==z) {
 		return this.chunks[i]; } }
-	// debug.log("No chunk at: " + X + "," + Z + "\n");
+	debug.log("[WorldGen] No chunk at: " + X + "," + Z + "\n");
 	return null; }
 
     getChunkIndex(X,Z) {
@@ -578,7 +578,7 @@ class World {
 	for(var i=0;i<this.chunks.length;++i) {
 	    if(this.chunks[i].posx==x&&this.chunks[i].posz==z) {
 		return i; } }
-	// debug.log("No chunk at: " + X + "," + Z + "\n");
+	debug.log("[WorldGen] No chunk at: " + X + "," + Z + "\n");
 	return null; }
 
     scan(X,Z,R) {
@@ -622,7 +622,7 @@ class World {
 
 	this.blocks = BLOCKS;
 
-	debug.log("World Detail : W: " + this.width + " H: " + this.height + " D: " + this.depth
+	debug.log("[WorldGen] World Detail : W: " + this.width + " H: " + this.height + " D: " + this.depth
 		  + " CW: " + this.chunkWidth + " CH: " + this.chunkHeight + " CD " + this.chunkDepth + " SEED: " + this.seed + "\n");
     } }
 
@@ -636,10 +636,10 @@ window.onload = function() {
                        Forked by: Ricky Cheung\n\
 \n\
                      Email   : rcheung844@gmail.com\n\
-                  This project is forked under the GPLv3\n\
+                 This project is forked under the GPL-2.0\n\
 \n");
 
-    debug.log("[INIT] Using browser : " + window.navigator.userAgent + "\n");
+    debug.log("[INFO] Using browser : " + window.navigator.userAgent + "\n");
 
     initgl("webby-box");
 
