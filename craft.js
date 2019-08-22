@@ -745,7 +745,7 @@ window.onload = function() {
     var currBlock=1;
 
     var canMoveF=true,canMoveB=true,canMoveL=true,canMoveR=true;
-    var moveFW=true,moveBW=true,moveLW=true,moveRW=true,moveUW=true,moveDW=true;
+    var moveFW=false,moveBW=false,moveLW=false,moveRW=false,moveUW=false,moveDW=false;
     var moveSpeed=0.5;
 
     var isJumping=false;
