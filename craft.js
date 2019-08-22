@@ -899,7 +899,7 @@ window.onload = function() {
 
         let d = Math.sqrt(Math.pow(X-c.posx, 2)+Math.pow(Y-c.posy, 2));
 
-        debug.log('dist : ' + d + '\n');
+        // debug.log('[WorldGen] dist : ' + d + '\n');
 
         if(d > 200.0) {
             debug.log('chunk forgotten\n');
