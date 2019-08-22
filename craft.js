@@ -705,6 +705,7 @@ window.onload = function() {
     var diamyBlock = new Block("Diamond Block",[8,2 , 8,2 , 8,1 , 8,3 , 8,2 , 8,2]);
 
     var debugBlock = new Block("Debug Block",[1,7 , 2,7 , 1,8 , 2,8 , 1,9 , 2,9]);
+    var MicroBlock = new Block("Microapps Block",[5,13 , 5,13 , 5,13 , 5,13 , 5,13 , 5,13]);
     
     var blocks=[ grassBlock , stoneBlock , dirtyBlock , sandyBlock , gravlBlock , loggyBlock , obsidBlock , pumpdBlock,
 		 goldoBlock , ironoBlock , coaloBlock , diamoBlock , reddoBlock,
