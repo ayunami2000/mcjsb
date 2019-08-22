@@ -607,7 +607,7 @@ class World {
 		if(Math.sqrt(a*a+b*b)>R) continue;
 
 		if(this.findChunk(px,pz)==null) {
-		    // debug.log("Creating chunk\n");
+		    debug.log("Creating chunk\n");
 		    this.chunks.push(new Chunk(this.chunkWidth,this.chunkHeight,this.chunkDepth , px,0,pz ,this.seed,this.blocks,this));
             break; } } } }
     
@@ -745,12 +745,12 @@ window.onload = function() {
     var currBlock=1;
 
     var canMoveF=true,canMoveB=true,canMoveL=true,canMoveR=true;
-    var moveFW=false,moveBW=false,moveLW=false,moveRW=false,moveUW=false,moveDW=false;
-    var moveSpeed=0.125;
+    var moveFW=true,moveBW=true,moveLW=true,moveRW=true,moveUW=true,moveDW=true;
+    var moveSpeed=0.5;
 
     var isJumping=false;
-    var fullJumpSpeed=0.175;
-    var progJumpSpeed=0.0075;
+    var fullJumpSpeed=0.5;
+    var progJumpSpeed=0.0175;
     var realJumpSpeed=0.0;
 
     var canJump=false;
