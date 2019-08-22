@@ -746,11 +746,11 @@ window.onload = function() {
 
     var canMoveF=true,canMoveB=true,canMoveL=true,canMoveR=true;
     var moveFW=false,moveBW=false,moveLW=false,moveRW=false,moveUW=false,moveDW=false;
-    var moveSpeed=0.5;
+    var moveSpeed=0.25;
 
     var isJumping=false;
-    var fullJumpSpeed=0.5;
-    var progJumpSpeed=0.0175;
+    var fullJumpSpeed=0.175;
+    var progJumpSpeed=0.0075;
     var realJumpSpeed=0.0;
 
     var canJump=false;
