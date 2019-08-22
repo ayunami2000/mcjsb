@@ -607,8 +607,8 @@ class World {
 		if(Math.sqrt(a*a+b*b)>R) continue;
 
 		if(this.findChunk(px,pz)==null) {
-		    // debug.log("[WorldGen] Creating chunk\n");
-		    this.chunks.push(new Chunk(this.chunkWidth,this.chunkHeight,this.chunkDepth , px,0,pz ,this.seed,this.blocks,this));
+		    this.chunks.push(new Chunk(this.chunkWidth,this.chunkHeight,this.chunkDepth , px,0,pz ,this.seed,this.blocks,this));.
+		    debug.log("[WorldGen] Chunk created\n");
             break; } } } }
     
     create(CWIDTH,CHEIGHT,CDEPTH,SEED,BLOCKS) {
@@ -705,14 +705,14 @@ window.onload = function() {
     var diamyBlock = new Block("Diamond Block",[8,2 , 8,2 , 8,1 , 8,3 , 8,2 , 8,2]);
 
     var debugBlock = new Block("Debug Block",[1,7 , 2,7 , 1,8 , 2,8 , 1,9 , 2,9]);
-    var MicroBlock = new Block("Microapps Block",[5,13 , 5,13 , 5,13 , 5,13 , 5,13 , 5,13]);
+    var microBlock = new Block("Microapps Block",[5,13 , 5,13 , 5,13 , 5,13 , 5,13 , 5,13]);
     
     var blocks=[ grassBlock , stoneBlock , dirtyBlock , sandyBlock , gravlBlock , loggyBlock , obsidBlock , pumpdBlock,
 		 goldoBlock , ironoBlock , coaloBlock , diamoBlock , reddoBlock,
 		 beddyBlock , netheBlock , glowyBlock,
 		 cobblBlock , gobblBlock , plankBlock , smothBlock , brickBlock , dynamBlock , chestBlock , craftBlock , furnaBlock , jukeyBlock , clayuBlock , whoolBlock , booksBlock , spongBlock,
 		 goldyBlock , ironyBlock , diamyBlock,
-		 debugBlock ];
+		 debugBlock , microBlock];
 
     var tWorld = new World(16,128,16 , Math.random() , blocks);
 
