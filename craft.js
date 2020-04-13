@@ -607,7 +607,7 @@ class World {
 		if(Math.sqrt(a*a+b*b)>R) continue;
 
 		if(this.findChunk(px,pz)==null) {
-		    this.chunks.push(new Chunk(this.chunkWidth,this.chunkHeight,this.chunkDepth , px,0,pz ,this.seed,this.blocks,this));.
+		    this.chunks.push(new Chunk(this.chunkWidth,this.chunkHeight,this.chunkDepth , px,0,pz ,this.seed,this.blocks,this));
 		    debug.log("[WorldGen] Chunk created\n");
             break; } } } }
     
